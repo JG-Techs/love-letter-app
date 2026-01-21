@@ -1,0 +1,96 @@
+:root {
+  --bg-color: #FFE4EC;
+  --accent-color: #FF6F91;
+  --card-bg: #FFFFFF;
+  --text-main: #4A4A4A;
+  --text-light: #888888;
+  --shadow: 0 4px 20px rgba(255, 111, 145, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  max-width: 480px; /* Mobile friendly */
+  padding: 20px;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--accent-color);
+}
+
+button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 111, 145, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 20px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 111, 145, 0.6);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid var(--bg-color);
+  border-radius: 15px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+  margin-bottom: 10px;
+  background: #FFF0F5;
+  color: var(--text-main);
+}
+
+input:focus, textarea:focus {
+  border-color: var(--accent-color);
+  background: white;
+}
+
+::placeholder {
+  color: #FFA5BA;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
